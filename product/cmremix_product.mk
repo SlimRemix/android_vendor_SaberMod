@@ -54,6 +54,9 @@ ifneq ($(filter %cmremix_falcon,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := cmremix_falcon
 endif
 
+ifneq ($(filter %cmremix_shamu,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := cmremix_shamu
+
 # General ROM strings
 
 # -O3 disabled by default.  To enable it change here to := true,
