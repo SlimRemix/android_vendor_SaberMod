@@ -78,8 +78,18 @@ ifneq ($(filter %trltexx,$(TARGET_DEVICE)),)
   LOCAL_ARCH := arm
 endif
 
+ifneq ($(filter %trltevzw,$(TARGET_DEVICE)),)
+  include $(SM_VENDOR)/device/sm_trltevzw.mk
+  LOCAL_ARCH := arm
+endif
+
 ifneq ($(filter %falcon,$(TARGET_DEVICE)),)
   include $(SM_VENDOR)/device/sm_falcon.mk
+  LOCAL_ARCH := arm
+endif
+
+ifneq ($(filter %jflteusc,$(TARGET_DEVICE)),)
+  include $(SM_VENDOR)/device/sm_jflteusc.mk
   LOCAL_ARCH := arm
 endif
 

@@ -50,12 +50,19 @@ ifneq ($(filter %cmremix_trltexx,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := cmremix_trltexx
 endif
 
+ifneq ($(filter %cmremix_trltevzw,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := cmremix_trltevzw
+endif
+
 ifneq ($(filter %cmremix_falcon,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := cmremix_falcon
 endif
 
 ifneq ($(filter %cmremix_shamu,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := cmremix_shamu
+
+ifneq ($(filter %cmremix_jflteusc,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := cmremix_jflteusc
 
 # General ROM strings
 

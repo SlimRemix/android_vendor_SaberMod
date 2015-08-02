@@ -49,12 +49,21 @@ endif
 ifneq ($(filter %slimremix_trltexx,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_trltexx
 endif
+
+ifneq ($(filter %slimremix_trltevzw,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_trltevzw
+endif
+
 ifneq ($(filter %slimremix_shamu,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_shamu
 endif
 
 ifneq ($(filter %slimremix_falcon,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_falcon
+endif
+
+ifneq ($(filter %slimremix_jflteusc,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_jflteusc
 endif
 
 # General ROM strings
