@@ -66,6 +66,10 @@ ifneq ($(filter %slimremix_jflteusc,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_jflteusc
 endif
 
+ifneq ($(filter %cmremix_sprout4,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_sprout4
+endif
+
 # General ROM strings
 
 # -O3 disabled by default.  To enable it change here to := true,
