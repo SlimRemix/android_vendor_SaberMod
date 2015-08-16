@@ -456,7 +456,11 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
           libstagefright_mp3dec \
           libstagefright_m4vh263dec \
           libstagefright_m4vh263enc \
-          libwebrtc_apm
+          libwebrtc_apm \
+          libbusybox \
+          libstagefright \
+          busybox \
+          unrar
       endif
 
       # Check if there's already something set somewhere.
