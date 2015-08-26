@@ -45,6 +45,14 @@ ifneq ($(filter %sprout4,$(TARGET_PRODUCT)),)
   endif
 endif
 
+ifneq ($(filter %bacon,$(TARGET_PRODUCT)),)
+  KERNEL_DIR := kernel/oneplus/msm8974
+  KERNEL_BINARY_IMAGE := zImage-dtb
+  ifneq ($(filter px%,$(TARGET_PRODUCT)),)
+    KERNEL_DEFCONFIG := slim_bacon_defconfig
+  endif
+endif
+
 ifdef KERNEL_DIR
   include $(KERNEL_DIR)/AndroidKernel.mk
 endif
