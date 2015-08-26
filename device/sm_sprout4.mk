@@ -26,7 +26,6 @@ ifeq ($(strip $(HOST_OS)),linux)
 
   # Sabermod configs
   TARGET_ARCH := arm
-  TARGET_NDK_VERSION := 4.9
   TARGET_SM_AND := 4.9
   TARGET_SM_KERNEL := 4.9
   USE_CLANG_QCOM := false
@@ -34,7 +33,6 @@ ifeq ($(strip $(HOST_OS)),linux)
   CLANG_QCOM_COMPILE_ART := false
   CLANG_QCOM_COMPILE_BIONIC := false
   CLANG_QCOM_COMPILE_MIXED := false
-  TRLTETMO_THREADS := 4
   PRODUCT_THREADS := $(SPROUT4_THREADS)
   LOCAL_STRICT_ALIASING := true
   LOCAL_O3 := true
@@ -53,21 +51,3 @@ endif
 # Extra SaberMod GCC C flags for arch target and Kernel
 EXTRA_SABERMOD_GCC_VECTORIZE := \
          -mvectorize-with-neon-quad
-
-ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
-
-  # Enable strict-aliasing kernel flags
-#export CONFIG_ARCH_APQ8084_TRLTE_STRICT_ALIASING := y
-
-  # Check if something is already set in product/sm_products.mk
-  ifndef LOCAL_DISABLE_STRICT_ALIASING
-    LOCAL_DISABLE_STRICT_ALIASING := \
-      libmmcamera_interface\
-      camera.msm8084
-  else
-    LOCAL_DISABLE_STRICT_ALIASING += \
-      libmmcamera_interface\
-      camera.msm8084
-  endif
-endif
-
