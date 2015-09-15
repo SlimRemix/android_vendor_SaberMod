@@ -31,6 +31,7 @@ ifeq ($(strip $(HOST_OS)),linux)
   TARGET_SM_KERNEL := 5.2
   USE_CLANG_QCOM := true
   USE_CLANG_QCOM_VERBOSE := false
+  USE_CLANG_QCOM_POLLY := true
   CLANG_QCOM_COMPILE_ART := false
   CLANG_QCOM_COMPILE_BIONIC := true
   CLANG_QCOM_COMPILE_MIXED := true
@@ -69,4 +70,3 @@ export CONFIG_ARCH_APQ8084_TRLTE_STRICT_ALIASING := y
       camera.msm8084
   endif
 endif
-
