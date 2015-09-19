@@ -65,7 +65,7 @@ export CONFIG_MACH_MSM8960_JFLTE_STRICT_ALIASING := y
   else
     LOCAL_DISABLE_STRICT_ALIASING += \
       libmmcamera_interface\
-      camera.msm88960
+      camera.msm8960
   endif
 endif
 
