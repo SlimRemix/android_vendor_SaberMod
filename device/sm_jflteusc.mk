@@ -55,17 +55,17 @@ EXTRA_SABERMOD_GCC_VECTORIZE := \
 
 ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
   # Enable strict-aliasing kernel flags
-export CONFIG_MACH_MSM8974_JFLTE_STRICT_ALIASING := y
+export CONFIG_MACH_MSM8960_JFLTE_STRICT_ALIASING := y
 
   # Check if something is already set in product/sm_products.mk
   ifndef LOCAL_DISABLE_STRICT_ALIASING
     LOCAL_DISABLE_STRICT_ALIASING := \
       libmmcamera_interface\
-      camera.msm8084
+      camera.msm8960
   else
     LOCAL_DISABLE_STRICT_ALIASING += \
       libmmcamera_interface\
-      camera.msm8084
+      camera.msm88960
   endif
 endif
 
