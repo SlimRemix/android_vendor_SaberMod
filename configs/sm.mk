@@ -423,6 +423,7 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
         libFraunhoferAAC \
         libinput \
         libmedia \
+        libncurses \
 	$(NO_OPTIMIZATIONS)
     endif
 
@@ -479,6 +480,45 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
   endif
 endif
 
+   # Floop Nest Modules flags
+  LOCAL_ENABLE_NEST := \
+    art \
+    libsigchain \
+    libart \
+    libart-compiler \
+    libartd \
+    libartd-compiler \
+    libart-disassembler \
+    libartd-disassembler \
+    core.art-host \
+    core.art \
+    cpplint-art-phony \
+    libnativebridgetest \
+    libarttest \
+    art-run-tests \
+    libart-gtest \
+    libc \
+    libc_bionic \
+    libc_gdtoa \
+    libc_netbsd \
+    libc_freebsd \
+    libc_dns \
+    libc_openbsd \
+    libc_cxa \
+    libc_syscalls \
+    libc_aeabi \
+    libc_common \
+    libc_nomalloc \
+    libc_malloc \
+    libc_stack_protector \
+    libc_tzcode \
+    libstdc++ \
+    linker \
+    libdl \
+    libm \
+    tzdata \
+    bionic-benchmarks
+
 # strict-aliasing
 
 ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
@@ -528,29 +568,46 @@ ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
     libjavacore \
     libstagefright_avcenc \
     libRSDriver \
+    libminivold \
+    libsdcard \
+    libvold \
+    gatt_testtool \
+    su \
+    libqsap_sdk \
     libc_malloc \
     libRSSupport \
     libstlport \
-    libandroid_runtime \
-    libcrypto \
-    libwnndict \
-    libmedia \
+    libstlport_static \
+    libcrypto_static \
     dnsmasq \
+    libmedia \
     ping \
-    ping6 \
     libaudioflinger \
     libmediaplayerservice \
     libstagefright \
+    libssh \
     libvariablespeed \
+    libsurfaceflinger \
+    libstagefright_amrnbdec \
     librtp_jni \
+    libOmxVenc \
     libwilhelm \
-    libdownmix \
     libldnhncr \
+    libdownmix \
     libqcomvisualizer \
     libvisualizer \
-    libandroidfw \
-    libstlport_static \
+    lsof \
+    libcrypto \
+    ping6 \
+    ssh \
     tcpdump \
+    libfuse \
+    libbusybox \
+    libziparchive-host \
+    mdnsd \
+    libuclibcrpc \
+    busybox \
+    libfdlibm \
     $(NO_OPTIMIZATIONS)
 
   # Check if there's already something somewhere.
