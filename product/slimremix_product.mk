@@ -74,6 +74,14 @@ ifneq ($(filter %slimremix_bacon,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_bacon
 endif
 
+ifneq ($(filter %slimremix_huashan,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_huashan
+endif
+
+ifneq ($(filter %slimremix_ls990,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_ls990
+endif
+
 # General ROM strings
 
 # -O3 disabled by default.  To enable it change here to := true,

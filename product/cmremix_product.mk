@@ -74,6 +74,14 @@ ifneq ($(filter %cmremix_sprout4,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := cmremix_sprout4
 endif
 
+ifneq ($(filter %cmremix_huashan,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := cmremix_huashan
+endif
+
+ifneq ($(filter %cmremix_ls990,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := cmremix_ls990
+endif
+
 # General ROM strings
 
 # -O3 disabled by default.  To enable it change here to := true,
